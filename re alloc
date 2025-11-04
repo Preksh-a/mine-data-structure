@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+char str = (char)malloc(6 * sizeof(char));
+strcpy(str, "Hello");
+
+str = (char*)realloc(str, 12 * sizeof(char)); // increase size
+strcat(str, " World");
+
+printf("%s\n", str);
+free(str);
+return 0;
+}
