@@ -1,0 +1,18 @@
+#include<stdio.h>
+#define CAP 10
+int main()
+{
+    int a[CAP] = {1,4,6};
+    int n = 8;
+    int value = 87;
+    if(n<CAP){
+        a[n]=value;
+        n++;
+        }
+    else{
+        printf("Array is gone");
+    } 
+    for(int i=0; i<n; i++){
+        printf("%d ",a[i]);
+    }
+}
