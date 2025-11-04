@@ -1,13 +1,22 @@
-#include<stdio.h>
-#define CAP 50
-void rajesh(int a[],int n);
-void rajesh(int a[CAP],int n){
-    for (int i = 0; i<n&&i<CAP; i++){
-a[i]=i;
- printf("%d",a[i]);
+  #include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+int arr = (int)malloc(3 * sizeof(int));
+arr[0] = 10; arr[1] = 20; arr[2] = 30;
+printf("%d %d %d\n", arr[0], arr[1], arr[2]);
+free(arr);
+return 0;
 }
-}
-int main(){
-int a[CAP],n=130;
-rajesh(a,n);
+
+2)
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+float nums = (float)malloc(3 * sizeof(float));
+nums[0] = 1.1; nums[1] = 2.2; nums[2] = 3.3;
+printf("%.1f %.1f %.1f\n", nums[0], nums[1], nums[2]);
+free(nums);
+return 0;
 }
