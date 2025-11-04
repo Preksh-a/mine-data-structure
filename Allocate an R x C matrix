@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int R, C;
+    int *mat, *trans;
+    int i, j;
+
+    printf("Enter rows (R) and columns (C): ");
+    scanf("%d %d", &R, &C);
+
+    // Allocate R*C integers as a single block
+    mat = (int *)malloc(R * C * sizeof(int));
+    if (mat == NULL) {
+        printf("Memory allocation failed.\n");
+        return 1;
+}
